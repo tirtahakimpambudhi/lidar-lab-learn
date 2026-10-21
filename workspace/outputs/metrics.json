@@ -1,0 +1,15 @@
+{
+  "note": "Synthetic kinematic path; LiDAR ranges are obtained by actual MuJoCo mj_ray calls. Ground truth is evaluator-only.",
+  "seed": 7,
+  "duration_s": 60.0,
+  "update_period_s": 0.1,
+  "rays_per_scan": 720,
+  "total_detected_feature_observations": 2695,
+  "mean_features_per_scan": 4.484193011647254,
+  "estimated_landmark_count": 9,
+  "position_rmse_m": 0.012434328216105671,
+  "position_mean_error_m": 0.010846730395348421,
+  "position_final_error_m": 0.005849400438126427,
+  "yaw_rmse_deg": 0.32041990820338945,
+  "yaw_final_error_deg": 0.4784404280444027
+}

@@ -1,0 +1,29 @@
+<mujoco model='arena_lidar'>
+  <worldbody>
+    <light pos='0 0 6' dir='0 0 -1'/>
+    <geom name='lantai' type='plane' size='6 6 0.1' rgba='0.8 0.8 0.8 1'/>
+
+    <!-- dinding arena 8 m x 8 m (sisi dalam di +-4 m) -->
+    <geom name='dinding_utara'   type='box' pos='0 4.05 0.5'  size='4.1 0.05 0.5' rgba='0.3 0.3 0.8 1'/>
+    <geom name='dinding_selatan' type='box' pos='0 -4.05 0.5' size='4.1 0.05 0.5' rgba='0.3 0.3 0.8 1'/>
+    <geom name='dinding_timur'   type='box' pos='4.05 0 0.5'  size='0.05 4.1 0.5' rgba='0.3 0.3 0.8 1'/>
+    <geom name='dinding_barat'   type='box' pos='-4.05 0 0.5' size='0.05 4.1 0.5' rgba='0.3 0.3 0.8 1'/>
+
+    <!-- tiga rintangan -->
+    <body name='rintangan_kotak' pos='2 1 0.4'>
+      <geom name='kotak' type='box' size='0.4 0.4 0.4' rgba='0.9 0.3 0.2 1'/>
+    </body>
+    <body name='rintangan_silinder' pos='-1.5 2 0.5'>
+      <geom name='silinder' type='cylinder' size='0.3 0.5' rgba='0.2 0.8 0.3 1'/>
+    </body>
+    <body name='rintangan_bola' pos='1 -2.5 0.35'>
+      <geom name='bola' type='sphere' size='0.35' rgba='0.9 0.8 0.2 1'/>
+    </body>
+
+    <!-- robot: body mocap (digerakkan lewat kode, bukan lewat fisika) -->
+    <body name='robot' mocap='true' pos='0 0 0.15'>
+      <geom name='badan_robot' type='box' size='0.2 0.15 0.08' rgba='0.1 0.1 0.1 1'/>
+      <site name='lidar_site' pos='0 0 0.2' size='0.03' rgba='1 0 0 1'/>
+    </body>
+  </worldbody>
+</mujoco>
